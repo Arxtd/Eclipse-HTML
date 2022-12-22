@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse</title>
+
+    <div class="content">
+        <div class="sun">
+            <div class="shadow"></div>
+        </div>
+    </div>
+
+    
+</head>
+<body>
+ 
+    
+<style>
+    body {
+        background-color: aquamarine;
+        animation: dayToNight 10s infinite 1.5s;
+    }
+
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+
+    .sun {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-color: #fcd25b;
+        border: jpx solid #fcd25b;
+
+    }
+
+    .shadow {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        background-color: aquamarine;
+        top: -5px;
+        left: 0px;
+        animation: moveshadow 10s infinite 1.5s;
+    }
+
+    @keyframes moveshadow {
+        0%{
+            transform: translateX(150px);
+            background-color: aquamarine;
+        }
+
+        50%{
+            transform: translateX(-10px);
+            background-color: black;
+        }
+
+        100%{
+            transform: translateX(170px);
+            background-color: aquamarine;
+        }
+       
+    }
+
+    @keyframes dayToNight {
+
+        0%{
+            background-color: aquamarine;
+        }
+
+        50%{
+            background-color: black;
+        }
+
+        100%{
+            background-color: aquamarine;
+        }
+        
+    }
+
+</style>
+
+</body>
+</html>
